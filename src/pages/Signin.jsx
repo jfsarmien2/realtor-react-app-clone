@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 export default function Signin() {
   const [formData, setFormdata] = useState({
@@ -25,7 +26,9 @@ export default function Signin() {
 
   return (
     <section>
-      <h1 className="text-3xl text-center mt-6 font-bold">Sign In</h1>
+      <h1 className="text-3xl text-center mt-6 font-bold text-slate-700">
+        Sign In
+      </h1>
       <div className="flex flex-wrap justify-center items-center px-6 py-12 max-w-6xl mx-auto md:gap-8">
         <div className="md:w-[67%] lg:w-[50%] mb-12 md:mb-6">
           <img
@@ -90,6 +93,16 @@ export default function Signin() {
                 </Link>
               </p>
             </div>
+            <button
+              className="bg-blue-600 w-full text-white uppercase text-sm px-7 py-3 hover:bg-blue-700 transition-all font-medium mb-6"
+              type="submit"
+            >
+              Sign In
+            </button>
+            <div className="flex gap-5 before:border-t before:border-gray-300 items-center before:flex-1 after:border-t after:flex-1 after:border-gray-300 mb-6">
+              <p className="text-center font-medium text-gray-600">OR</p>
+            </div>
+            <OAuth />
           </form>
         </div>
       </div>
